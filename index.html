@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nawel Taveras | Technology Portfolio</title>
-  <meta name="description" content="Technology portfolio for Nawel Taveras — IT Support, Software Development, Cloud Fundamentals, and airline operations experience." />
+  <meta name="description" content="Technology portfolio for Nawel Taveras — IT Support, POS Systems, Software Development, Cloud Fundamentals, and airline operations experience." />
 
   <style>
     :root {
@@ -23,16 +23,8 @@
       --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
@@ -42,16 +34,8 @@
       color: var(--text);
       line-height: 1.6;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 36px));
-      margin: 0 auto;
-    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
 
     .nav {
       position: sticky;
@@ -61,23 +45,8 @@
       background: rgba(7, 17, 31, 0.84);
       border-bottom: 1px solid var(--line);
     }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-      gap: 18px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-    }
-
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.2px; }
     .plane-mark {
       width: 34px;
       height: 34px;
@@ -88,40 +57,12 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       box-shadow: 0 8px 24px rgba(47, 128, 237, 0.24);
     }
+    .plane-mark svg { width: 19px; height: 19px; fill: var(--white); transform: rotate(-20deg); }
+    .nav-links { display: flex; gap: 18px; font-size: 0.93rem; color: var(--muted); flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a:hover { color: var(--white); }
 
-    .plane-mark svg {
-      width: 19px;
-      height: 19px;
-      fill: var(--white);
-      transform: rotate(-20deg);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 0.93rem;
-      color: var(--muted);
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav-links a:hover {
-      color: var(--white);
-    }
-
-    .hero {
-      padding: 76px 0 46px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 36px;
-      align-items: center;
-    }
-
+    .hero { padding: 76px 0 46px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 36px; align-items: center; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -133,40 +74,11 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
-
-    .eyebrow span {
-      width: 42px;
-      height: 2px;
-      background: var(--gold);
-      display: inline-block;
-    }
-
-    h1 {
-      font-size: clamp(2.35rem, 6vw, 4.8rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 strong {
-      color: var(--gold);
-      font-weight: 800;
-    }
-
-    .hero-subtitle {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--muted);
-      max-width: 720px;
-      margin-bottom: 24px;
-    }
-
-    .button-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 26px;
-    }
-
+    .eyebrow span { width: 42px; height: 2px; background: var(--gold); display: inline-block; }
+    h1 { font-size: clamp(2.35rem, 6vw, 4.8rem); line-height: 0.98; letter-spacing: -0.05em; margin-bottom: 18px; }
+    .hero h1 strong { color: var(--gold); font-weight: 800; }
+    .hero-subtitle { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted); max-width: 720px; margin-bottom: 24px; }
+    .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -179,21 +91,9 @@
       border: 1px solid rgba(255, 255, 255, 0.14);
       transition: transform 0.18s ease, background 0.18s ease;
     }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--red), #b91d2b);
-      color: white;
-      box-shadow: 0 12px 30px rgba(230, 57, 70, 0.28);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--text);
-    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(135deg, var(--red), #b91d2b); color: white; box-shadow: 0 12px 30px rgba(230, 57, 70, 0.28); }
+    .btn-secondary { background: rgba(255, 255, 255, 0.06); color: var(--text); }
 
     .flight-card {
       background: linear-gradient(180deg, rgba(17, 31, 53, 0.98), rgba(11, 23, 40, 0.98));
@@ -204,7 +104,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .flight-card::before {
       content: "";
       position: absolute;
@@ -214,41 +113,16 @@
       height: 5px;
       background: linear-gradient(90deg, var(--blue), var(--gold), var(--red));
     }
-
-    .flight-card h2 {
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .route {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-      margin: 18px 0 22px;
-    }
-
-    .airport-code {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    .airport-label {
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-
+    .flight-card h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 18px; }
+    .route { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin: 18px 0 22px; }
+    .airport-code { font-size: 2rem; font-weight: 800; letter-spacing: -0.04em; }
+    .airport-label { color: var(--muted); font-size: 0.86rem; }
     .route-line {
       flex: 1;
       height: 1px;
       background: linear-gradient(90deg, rgba(255,255,255,0.2), var(--gold), rgba(255,255,255,0.2));
       position: relative;
     }
-
     .route-line::after {
       content: "✈";
       position: absolute;
@@ -258,232 +132,61 @@
       color: var(--gold);
       font-size: 1.4rem;
     }
+    .quick-list { display: grid; gap: 12px; margin-top: 18px; }
+    .quick-item { padding: 12px; border-radius: 14px; background: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .quick-item b { display: block; margin-bottom: 4px; }
+    .quick-item span { color: var(--muted); font-size: 0.92rem; }
 
-    .quick-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
+    section { padding: 34px 0; }
+    .section-title { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .section-title h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); letter-spacing: -0.04em; }
+    .section-title p { color: var(--muted); max-width: 560px; font-size: 0.96rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card { background: rgba(17, 31, 53, 0.82); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: 0 12px 34px rgba(0,0,0,0.14); }
+    .card h3 { font-size: 1.06rem; margin-bottom: 8px; }
+    .card p, .card li { color: var(--muted); font-size: 0.96rem; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag { display: inline-flex; padding: 7px 10px; background: rgba(47, 128, 237, 0.11); border: 1px solid rgba(47, 128, 237, 0.22); color: #dbeafe; border-radius: 999px; font-size: 0.82rem; font-weight: 700; }
+    .skill-block { margin-bottom: 16px; }
+    .skill-block h3 { color: var(--white); margin-bottom: 8px; font-size: 1rem; }
 
-    .quick-item {
-      padding: 12px;
+    .timeline { display: grid; gap: 16px; }
+    .timeline-item { display: grid; grid-template-columns: 220px 1fr; gap: 18px; padding: 20px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(17, 31, 53, 0.72); }
+    .timeline-date { color: var(--gold); font-weight: 800; }
+    .timeline-role { font-size: 1.12rem; font-weight: 800; margin-bottom: 4px; }
+    .timeline-company { color: var(--muted); margin-bottom: 10px; }
+    ul { padding-left: 19px; }
+    li + li { margin-top: 6px; }
+
+    .project-card { display: flex; flex-direction: column; min-height: 100%; }
+    .project-meta { color: var(--gold); font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; }
+    $1
+    .screenshot {
+      width: 100%;
       border-radius: 14px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .quick-item b {
+      border: 1px solid rgba(255,255,255,0.14);
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.04);
       display: block;
-      margin-bottom: 4px;
     }
-
-    .quick-item span {
+    .image-note {
       color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    section {
-      padding: 34px 0;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 12px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(1.6rem, 3vw, 2.25rem);
-      letter-spacing: -0.04em;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      max-width: 560px;
-      font-size: 0.96rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .card {
-      background: rgba(17, 31, 53, 0.82);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: 0 12px 34px rgba(0,0,0,0.14);
-    }
-
-    .card h3 {
-      font-size: 1.06rem;
-      margin-bottom: 8px;
-    }
-
-    .card p, .card li {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 7px 10px;
-      background: rgba(47, 128, 237, 0.11);
-      border: 1px solid rgba(47, 128, 237, 0.22);
-      color: #dbeafe;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 700;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 16px;
-    }
-
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 18px;
-      padding: 20px;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: rgba(17, 31, 53, 0.72);
-    }
-
-    .timeline-date {
-      color: var(--gold);
-      font-weight: 800;
-    }
-
-    .timeline-role {
-      font-size: 1.12rem;
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-
-    .timeline-company {
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    ul {
-      padding-left: 19px;
-    }
-
-    li + li {
-      margin-top: 6px;
-    }
-
-    .project-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-    }
-
-    .project-meta {
-      color: var(--gold);
-      font-weight: 700;
       font-size: 0.9rem;
-      margin-bottom: 10px;
+      margin-top: 8px;
     }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: auto;
-      padding-top: 18px;
-    }
-
-    .small-link {
-      font-weight: 700;
-      color: var(--white);
-      border-bottom: 1px solid rgba(255,255,255,0.4);
-    }
-
-    .cert-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .cert-item {
-      padding: 16px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .cert-item b {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .cert-item span {
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .contact-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
-      background: linear-gradient(135deg, rgba(47, 128, 237, 0.16), rgba(230, 57, 70, 0.12));
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
-      margin-bottom: 34px;
-    }
-
-    .footer {
-      padding: 24px 0 40px;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      font-size: 0.92rem;
-    }
+    .cert-list { display: grid; gap: 12px; }
+    .cert-item { padding: 16px; border-radius: 16px; background: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .cert-item b { display: block; margin-bottom: 4px; }
+    .cert-item span { color: var(--muted); font-size: 0.94rem; }
+    .contact-card { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; background: linear-gradient(135deg, rgba(47, 128, 237, 0.16), rgba(230, 57, 70, 0.12)); border: 1px solid var(--line); border-radius: 24px; padding: 28px; margin-bottom: 34px; }
+    .footer { padding: 24px 0 40px; color: var(--muted); border-top: 1px solid var(--line); font-size: 0.92rem; }
 
     @media (max-width: 860px) {
-      .hero-grid,
-      .grid-2,
-      .grid-3,
-      .contact-card,
-      .timeline-item {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-        gap: 12px;
-      }
-
-      .hero {
-        padding-top: 46px;
-      }
+      .hero-grid, .grid-2, .grid-3, .contact-card, .timeline-item { grid-template-columns: 1fr; }
+      .nav-inner { align-items: flex-start; flex-direction: column; }
+      .nav-links { justify-content: flex-start; gap: 12px; }
+      .hero { padding-top: 46px; }
     }
   </style>
 </head>
@@ -499,8 +202,10 @@
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#project-images">Project Images</a>
         <a href="#training">Training</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -514,10 +219,9 @@
           <div class="eyebrow"><span></span> Technology Portfolio</div>
           <h1>Technology, operations, and <strong>real-world problem solving.</strong></h1>
           <p class="hero-subtitle">
-            I am a Southwest Airlines Employee building a technology career through IT support experience, software development projects, cloud learning, and firsthand airline operations perspective.
+            Technology-focused professional with experience in IT support, point-of-sale systems, customer-facing airport operations, and software development. Passionate about leveraging technology to solve real-world business problems.
           </p>
           <div class="button-row">
-            <!-- Replace resume.pdf with your uploaded resume file name if hosting on GitHub Pages. -->
             <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
             <a class="btn btn-secondary" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
             <a class="btn btn-secondary" href="http://www.linkedin.com/in/nawel-taveras-165b78225" target="_blank" rel="noopener">LinkedIn</a>
@@ -534,13 +238,13 @@
             <div class="route-line" aria-hidden="true"></div>
             <div style="text-align:right;">
               <div class="airport-code">TECH</div>
-              <div class="airport-label">Southwest Technology</div>
+              <div class="airport-label">Technology</div>
             </div>
           </div>
           <div class="quick-list">
-            <div class="quick-item"><b>Current Focus</b><span>Cloud fundamentals, backend development, and operational technology.</span></div>
-            <div class="quick-item"><b>Core Strength</b><span>Learning quickly, troubleshooting under pressure, and connecting technical work to business impact.</span></div>
-            <div class="quick-item"><b>Goal</b><span>Build reliable tools that support Employees, Customers, and airline operations.</span></div>
+            <div class="quick-item"><b>Current Focus</b><span>Cloud fundamentals, backend development, IT support, and operational technology.</span></div>
+            <div class="quick-item"><b>Core Strength</b><span>Learning quickly, troubleshooting under pressure, documenting issues, and connecting technical work to business impact.</span></div>
+            <div class="quick-item"><b>Goal</b><span>Build reliable tools that support Employees, Customers, and business operations.</span></div>
           </div>
         </aside>
       </div>
@@ -552,19 +256,10 @@
           <h2>About Me</h2>
           <p>A practical, operations-aware technology candidate with support, leadership, and software project experience.</p>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>IT Support Foundation</h3>
-            <p>Former POS Retail Support Technician at Solugenix, a California-based IT services company, promoted to Lead Technician after supporting business-critical POS systems across 100+ U.S. retail/QSR locations while working remotely from the Dominican Republic.</p>
-          </article>
-          <article class="card">
-            <h3>Software Builder</h3>
-            <p>Designed and built a pharmacy point-of-sale system using C# and SQL Server, including inventory, billing, and reporting features.</p>
-          </article>
-          <article class="card">
-            <h3>Airline Perspective</h3>
-            <p>Current Southwest Airlines Employee with firsthand understanding of how internal tools affect CSAs, Customers, baggage, flights, and daily operations.</p>
-          </article>
+        <div class="card">
+          <p>
+            Technology-focused professional with experience in IT support, point-of-sale (POS) systems, customer-facing airport operations, and software development. Promoted from POS Retail Support Technician to Lead Technician after supporting business-critical POS environments across more than 100 retail and quick-service restaurant locations nationwide. Skilled in troubleshooting hardware, software, network connectivity, and end-user issues in fast-paced, high-availability environments. Hands-on development experience includes building a pharmacy POS application using C# and Microsoft SQL Server with inventory management, billing, and reporting functionality. Completed the Google IT Support Professional Certificate, pursued application development studies at PUCMM, and actively expanding cloud expertise through AWS Skill Builder and preparation for the AWS Certified Cloud Practitioner certification. Passionate about leveraging technology to solve real-world business problems.
+          </p>
         </div>
       </div>
     </section>
@@ -573,35 +268,85 @@
       <div class="container">
         <div class="section-title">
           <h2>Technical Skills</h2>
-          <p>Focused on practical technical fundamentals, support workflows, Agile delivery concepts, and cloud learning.</p>
+          <p>Core technologies, support skills, and methodologies connected to software, cloud, IT support, and business operations.</p>
         </div>
-        <div class="card">
-          <div class="tag-row">
-            <span class="tag">C#</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Express.js</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">SQL Server</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Prisma ORM</span>
-            <span class="tag">AWS Fundamentals</span>
-            <span class="tag">AWS Skill Builder</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitLab</span>
-            <span class="tag">CI/CD Fundamentals</span>
-            <span class="tag">POS Support</span>
-            <span class="tag">Windows</span>
-            <span class="tag">Linux Fundamentals</span>
-            <span class="tag">Networking Basics</span>
-            <span class="tag">Cybersecurity Fundamentals</span>
-            <span class="tag">Scrum Fundamentals</span>
-            <span class="tag">SAFe Familiarity</span>
-            <span class="tag">Technical Documentation</span>
-          </div>
+        <div class="grid-2">
+          <article class="card skill-block">
+            <h3>Programming Languages</h3>
+            <div class="tag-row">
+              <span class="tag">C#</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SQL</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </article>
+          <article class="card skill-block">
+            <h3>Backend & API Development</h3>
+            <div class="tag-row">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">RESTful APIs</span>
+              <span class="tag">ASP.NET Fundamentals</span>
+              <span class="tag">CRUD Operations</span>
+            </div>
+          </article>
+          <article class="card skill-block">
+            <h3>Databases</h3>
+            <div class="tag-row">
+              <span class="tag">Microsoft SQL Server</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Prisma ORM</span>
+              <span class="tag">Relational Database Design</span>
+            </div>
+          </article>
+          <article class="card skill-block">
+            <h3>Cloud & DevOps</h3>
+            <div class="tag-row">
+              <span class="tag">AWS Fundamentals</span>
+              <span class="tag">AWS Skill Builder</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitLab</span>
+              <span class="tag">Git</span>
+              <span class="tag">CI/CD Fundamentals</span>
+            </div>
+          </article>
+          <article class="card skill-block">
+            <h3>IT Support & Systems</h3>
+            <div class="tag-row">
+              <span class="tag">POS Systems</span>
+              <span class="tag">Microsoft Windows</span>
+              <span class="tag">Linux Fundamentals</span>
+              <span class="tag">Remote Troubleshooting</span>
+              <span class="tag">System Administration Fundamentals</span>
+            </div>
+          </article>
+          <article class="card skill-block">
+            <h3>Networking & Security</h3>
+            <div class="tag-row">
+              <span class="tag">TCP/IP</span>
+              <span class="tag">DNS</span>
+              <span class="tag">VPNs</span>
+              <span class="tag">Proxies</span>
+              <span class="tag">Firewalls</span>
+              <span class="tag">Connectivity Troubleshooting</span>
+              <span class="tag">Cybersecurity Fundamentals</span>
+            </div>
+          </article>
+          <article class="card skill-block" style="grid-column: 1 / -1;">
+            <h3>Methodologies & Professional Skills</h3>
+            <div class="tag-row">
+              <span class="tag">Scrum Alliance Fundamentals</span>
+              <span class="tag">SAFe Familiarity</span>
+              <span class="tag">Technical Documentation</span>
+              <span class="tag">End-User Training</span>
+              <span class="tag">Leadership</span>
+              <span class="tag">Customer Service</span>
+              <span class="tag">English & Spanish</span>
+              <span class="tag">Calm Under Pressure</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -612,7 +357,6 @@
           <h2>Experience</h2>
           <p>Support, leadership, operations, and technology exposure across airline and retail/QSR environments.</p>
         </div>
-
         <div class="timeline">
           <article class="timeline-item">
             <div class="timeline-date">June 2025 — Present</div>
@@ -633,8 +377,8 @@
               <div class="timeline-role">Lead POS Retail Support Technician / POS Retail Support Technician</div>
               <div class="timeline-company">Solugenix — California-based IT Services Company · Remote from Dominican Republic</div>
               <ul>
-                <li>Provided remote technical support from the Dominican Republic for POS systems across 100+ U.S. retail/QSR locations.</li>
-                <li>Resolved network, software, hardware, terminal, connectivity, and user-impacting issues affecting business-critical operations.</li>
+                <li>Provided remote technical support from the Dominican Republic for POS systems across 100+ retail and quick-service restaurant locations nationwide.</li>
+                <li>Resolved hardware, software, network connectivity, terminal, and end-user issues affecting high-availability POS environments.</li>
                 <li>Promoted to Lead Technician after demonstrating troubleshooting, ownership, communication, and team support skills.</li>
                 <li>Guided technicians, supported escalations, documented incidents and recurring issues, and trained new team members on POS workflows and escalation processes.</li>
                 <li>Built familiarity with Scrum and SAFe concepts through technical learning and exposure to Agile delivery practices.</li>
@@ -659,14 +403,14 @@
             <div class="tag-row">
               <span class="tag">Node.js</span>
               <span class="tag">TypeScript</span>
-              <span class="tag">REST APIs</span>
+              <span class="tag">RESTful APIs</span>
               <span class="tag">AWS</span>
               <span class="tag">API Gateway</span>
               <span class="tag">Lambda</span>
               <span class="tag">AWS CDK</span>
             </div>
             <div class="project-links">
-              <a class="small-link" href="https://gitlab.com/your-username/irops-project" target="_blank" rel="noopener">Repository</a>
+              <a class="small-link" href="https://github.com/your-username/irops-project" target="_blank" rel="noopener">Repository</a>
               <a class="small-link" href="#" target="_blank" rel="noopener">Demo Coming Soon</a>
             </div>
           </article>
@@ -677,14 +421,14 @@
             <p>Point-of-sale system built for a pharmacy in the Dominican Republic with inventory management, billing, reporting, and database-backed daily operations.</p>
             <div class="tag-row">
               <span class="tag">C#</span>
-              <span class="tag">SQL Server</span>
+              <span class="tag">Microsoft SQL Server</span>
               <span class="tag">Inventory</span>
               <span class="tag">Billing</span>
               <span class="tag">Reporting</span>
               <span class="tag">Business Automation</span>
             </div>
             <div class="project-links">
-              <a class="small-link" href="https://gitlab.com/your-username/pharmacy-pos" target="_blank" rel="noopener">Repository</a>
+              <a class="small-link" href="https://github.com/your-username/pharmacy-pos" target="_blank" rel="noopener">Repository</a>
               <a class="small-link" href="#contact">Ask Me About It</a>
             </div>
           </article>
@@ -692,7 +436,36 @@
       </div>
     </section>
 
-    <section id="training">
+    <section id="project-images">
+      <div class="container">
+        <div class="section-title">
+          <h2>Project Images</h2>
+          <p>Some images of the C# and Microsoft SQL Server pharmacy POS project. Sensitive or private business data should be removed or replaced with sample data.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <img class="screenshot" src="assets/pharmacy-pos-purchase-entry.png" alt="Pharmacy POS purchase product entry screen built with C# and Microsoft SQL Server">
+            <h3>Purchase / Product Entry</h3>
+            <p>Screen used to register product purchases, supplier information, quantities, unit cost, taxes, discounts, and totals.</p>
+          </article>
+
+          <article class="card">
+            <img class="screenshot" src="assets/pharmacy-pos-main-menu.png" alt="Pharmacy POS main menu dashboard built with C# and Microsoft SQL Server">
+            <h3>Main Menu</h3>
+            <p>Main navigation interface for product management, providers, clients, purchases, sales, configuration, and inventory.</p>
+          </article>
+
+          <article class="card">
+            <img class="screenshot" src="assets/pharmacy-pos-sales-entry.png" alt="Pharmacy POS sales entry screen built with C# and Microsoft SQL Server">
+            <h3>Sales Workflow</h3>
+            <p>Sales screen designed to manage invoices, clients, products, quantities, discounts, taxes, payment, change, and transaction totals.</p>
+          </article>
+        </div>
+        <p class="image-note">Project context: This desktop POS application was built as a practical business software project using C# and Microsoft SQL Server.</p>
+      </div>
+    </section>
+
+$1
       <div class="container">
         <div class="section-title">
           <h2>Education & Training</h2>
@@ -702,7 +475,7 @@
           <div class="card cert-list">
             <div class="cert-item">
               <b>Google IT Support Professional Certificate</b>
-              <span>Completed March 2025 · IT support, networking, operating systems, system administration, infrastructure services, cybersecurity fundamentals.</span>
+              <span>Completed March 2025 · IT support, networking, operating systems, system administration, infrastructure services, cybersecurity fundamentals. <a class="small-link" href="https://coursera.org/verify/professional-cert/CSJ5S7SGK1XF" target="_blank" rel="noopener">Verify Certificate</a></span>
             </div>
             <div class="cert-item">
               <b>AWS Cloud Practitioner Preparation</b>
